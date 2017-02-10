@@ -146,11 +146,11 @@ void CCrossbowBolt::BoltTouch( CBaseEntity *pOther )
 			pev->angles.z = RANDOM_LONG( 0, 360 );
 			pev->nextthink = gpGlobals->time + 10.0;			
 
-			if (gPhysicsInterfaceInitialized) {
+//			if (gPhysicsInterfaceInitialized) {
 				// g-cont. Setup movewith feature
 				pev->movetype = MOVETYPE_COMPOUND;	// set movewith type
 				pev->aiment = ENT( pOther->pev );	// set parent
-			}
+//			}
 		}
 
 		if( UTIL_PointContents( pev->origin ) != CONTENTS_WATER )
